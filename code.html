@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Device Info</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        .container {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Device Information</h2>
+        <p><strong>IMEI Number:</strong> <span id="imei">Loading...</span></p>
+        <p><strong>Signal Strength:</strong> <span id="signal">Loading...</span></p>
+        <p><strong>CCID:</strong> <span id="ccid">Loading...</span></p>
+        <button onclick="fetchDeviceInfo()">Update Info</button>
+    </div>
+
+    <script>
+        function fetchDeviceInfo() {
+            // Example data (Replace with actual fetching logic)
+            document.getElementById("imei").textContent = "862846043402885";  // Replace with dynamic IMEI
+            document.getElementById("signal").textContent = "-70 dBm";  // Replace with dynamic signal strength
+            document.getElementById("ccid").textContent = "89014103211118510720";  // Replace with dynamic CCID
+        }
+
+        // Auto-fetch on page load
+        fetchDeviceInfo();
+    </script>
+
+</body>
+</html>
